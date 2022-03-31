@@ -12,12 +12,35 @@ const displayCountries = country => {
     countrie.innerHTML = countryListHTML.join(' ')
 }
 
-const getCountriesList = list => {
+// distructing 
+const getCountriesList = ({ name, flags }) => {
     return `
         <div class="country">
-            <h1>${list.name.common}</h1>
-            <img src="${list.flags.png}">
+            <h1>${name.common}</h1>
+            <img src="${flags.png}">
         </div>
     `
 }
+// // distructing 2
+// const getCountriesList = list => {
+//     // distructing
+//     const { name, flags } = list;
+//     return `
+//         <div class="country">
+//             <h1>${name.common}</h1>
+//             <img src="${flags.png}">
+//         </div>
+//     `
+// }
 allCountries()
+
+// original
+// const getCountriesList = list => {
+//     return `
+//         <div class="country">
+//             <h1>${list.name.common}</h1>
+//             <img src="${list.flags.png}">
+//         </div>
+//     `
+// }
+// allCountries()
